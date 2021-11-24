@@ -1,0 +1,39 @@
+<div style="width: 850px;">
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <dl>
+      <dt>
+        タイトル
+      </dt>
+      <dd>
+        <input style="width:500px" formControlName="title">
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        カテゴリ
+      </dt>
+      <dd>
+        <input style="width:500px" type="number" formControlName="category">
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        ステータス
+      </dt>
+      <dd>
+        <input style="width:500px" type="number" formControlName="state">
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        本文
+      </dt>
+      <dd>
+        <textarea style="width: 800px; height: 200px;" formControlName="body"></textarea>
+      </dd>
+    </dl>
+    <div style="text-align: right;">
+      <button style="margin-right: 10px;" type="submit">修正</button><a href="/todo/todo-list">リストへ戻る</a>
+    </div>
+  </form>
+</div>

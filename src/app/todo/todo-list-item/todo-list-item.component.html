@@ -1,0 +1,10 @@
+<div class="todo">
+  <div class="{{todo.categoryColor}} toDoCategory">{{todo.categoryName}}</div>
+  <div class="todoTitle">{{todo.title}}</div>
+  <div class="todoState">{{todo.state}}</div>
+  <div class="todoBody">{{todo.body}}</div>
+  <div style="text-align: right;">
+      <button mat-flat-button color="primary" (click)="editTodo()">編集</button>
+      <button mat-flat-button color="warn" (click)="deleteTodo()">削除</button>
+  </div>
+</div>
