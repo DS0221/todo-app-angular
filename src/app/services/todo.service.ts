@@ -7,6 +7,7 @@ import { TodoList } from '../models/todo-list.model';
 import { HttpHeaders } from '@angular/common/http';
 import { TodoSelect } from '../models/todo-select.model';
 import { TodoUpdate } from '../models/todo-update.model';
+import { TodoStatusList } from '../models/todo-status-list.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -28,6 +29,10 @@ export class TodoService {
 
   getTodoList(): Observable<TodoList> {
     return this.http.get<TodoList>(`${this.API_BASE_URL}/todoList`)
+  }
+
+  getTodoStatusList(): Observable<TodoStatusList> {
+    return this.http.get<TodoStatusList>(`${this.API_BASE_URL}/todoStatusList`)
   }
 
   createTodo(todo: TodoCreate): Observable<TodoCreate> {

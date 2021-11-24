@@ -1,6 +1,6 @@
 <div style="width: 100%;">
   <div style="margin-bottom: 20px; text-align: right;">
-    <a href="/todo/todo-create">➕TODO追加</a>
+    <a mat-flat-button color="accent" href="/todo/todo-create">➕TODO追加</a>
   </div>
       <app-todo-list-item *ngFor="let todo of todos"
         [todo] = "todo"

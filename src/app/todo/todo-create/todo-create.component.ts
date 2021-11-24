@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TodoCreate } from '../../models/todo-create.model';
 import { TodoService } from 'src/app/services/todo.service';
+import { Category } from 'src/app/models/category.model';
+import { CategoryList } from 'src/app/models/category-list.model';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-todo-create',
@@ -15,13 +18,17 @@ export class TodoCreateComponent implements OnInit {
 
   todoCreate: TodoCreate;
 
+  categories: Category[] = []
+
   constructor(
     private todoService: TodoService,
-    private router: Router){
-    this.todoForm = new FormGroup({
-      title:    new FormControl('', Validators.required),
-      body:     new FormControl('', Validators.required),
-      category: new FormControl('', Validators.required)
+    private categoryService: CategoryService,
+    private router: Router) {
+
+      this.todoForm = new FormGroup({
+        title:    new FormControl('', Validators.required),
+        body:     new FormControl('', Validators.required),
+        category: new FormControl("1", Validators.required)
     });
 
     this.todoCreate = this.todoForm.value;
@@ -29,13 +36,16 @@ export class TodoCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.categoryService.getCategoryList().subscribe((v:CategoryList) => {
+      this.categories = v.categoryList
+    })
   }
 
   onSubmit(): void {
     this.todoCreate = this.todoForm.value;
+    console.log(this.todoCreate)
     this.todoService.createTodo(this.todoCreate).subscribe({complete: () => this.router.navigateByUrl("/todo/todo-list")});
 
   }
-
 
 }

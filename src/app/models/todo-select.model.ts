@@ -1,6 +1,6 @@
 export interface TodoSelect {
   title:      string;
   body:       string;
-  category:   number;
-  state:      number;
+  category:   string;
+  state:      string;
 }

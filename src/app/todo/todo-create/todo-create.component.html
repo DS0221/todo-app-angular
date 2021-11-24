@@ -13,7 +13,11 @@
         カテゴリ
       </dt>
       <dd>
-        <input style="width:500px" type="number" formControlName="category">
+        <select style="width:500px" formControlName="category">
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
       </dd>
     </dl>
     <dl>
@@ -25,7 +29,7 @@
       </dd>
     </dl>
     <div style="text-align: right;">
-      <button style="margin-right: 10px;" type="submit">新規登録</button><a href="/todo/todo-list">リストへ戻る</a>
+      <button style="margin-right: 10px;" mat-flat-button color="primary" type="submit">新規登録</button><a mat-flat-button color="accent" href="/todo/todo-list">リストへ戻る</a>
     </div>
   </form>
 </div>
