@@ -43,9 +43,7 @@ export class TodoCreateComponent implements OnInit {
 
   onSubmit(): void {
     this.todoCreate = this.todoForm.value;
-    console.log(this.todoCreate)
     this.todoService.createTodo(this.todoCreate).subscribe({complete: () => this.router.navigateByUrl("/todo/todo-list")});
-
   }
 
 }

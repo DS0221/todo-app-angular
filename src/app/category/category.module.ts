@@ -5,13 +5,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CategoryListItemComponent } from './category-list-item/category-list-item.component';
 import { MatIconModule } from '@angular/material/icon';
+import { CategoryCreateComponent } from './category-create/category-create.component';
 
 
 
 @NgModule({
   declarations: [
     CategoryListComponent,
-    CategoryListItemComponent
+    CategoryListItemComponent,
+    CategoryCreateComponent
   ],
   imports: [
     CommonModule,

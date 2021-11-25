@@ -29,8 +29,8 @@ export class CategoryListComponent implements OnInit {
   }
 
   deleteCategory(id: number): void {
-    // this.categoryService.deleteCategory(id).subscribe({complete: () => this.router.navigateByUrl("/", {skipLocationChange:true}).then(
-    //   () => this.router.navigateByUrl("/category/category-list"))});
+    this.categoryService.deleteCategory(id).subscribe({complete: () => this.router.navigateByUrl("/", {skipLocationChange:true}).then(
+      () => this.router.navigateByUrl("/category/category-list"))});
   }
 
 }

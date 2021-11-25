@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
 import { CategoryList } from '../models/category-list.model';
 import { HttpHeaders } from '@angular/common/http';
+import { CategoryColorList } from '../models/category-color-list.model';
+import { CategoryCreate } from '../models/category-create.model';
+import { CategoryDelete } from '../models/category-delete.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -23,6 +26,18 @@ export class CategoryService {
 
   getCategoryList(): Observable<CategoryList> {
     return this.http.get<CategoryList>(`${this.API_BASE_URL}/categoryList`)
+  }
+
+  getCategoryColorList(): Observable<CategoryColorList> {
+    return this.http.get<CategoryColorList>(`${this.API_BASE_URL}/categoryColorList`)
+  }
+
+  createCategory(category: CategoryCreate): Observable<CategoryCreate> {
+    return this.http.post<CategoryCreate>(`${this.API_BASE_URL}/newCategorySave`,category, httpOptions).pipe(catchError(this.handleError<CategoryCreate>('createCategory')));
+  }
+
+  deleteCategory(id: number): Observable<CategoryDelete> {
+    return this.http.delete<CategoryDelete>(`${this.API_BASE_URL}/deleteCategory/${id}`).pipe(catchError(this.handleError<CategoryDelete>('deleteCategory')));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
