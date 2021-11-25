@@ -6,7 +6,7 @@ import { TodoListItemComponent } from './todo-list-item/todo-list-item.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { TodoCreateComponent } from './todo-create/todo-create.component';
 import { TodoUpdateComponent } from './todo-update/todo-update.component';
-
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { TodoUpdateComponent } from './todo-update/todo-update.component';
   imports: [
     CommonModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
   ]
 })
 export class TodoModule { }

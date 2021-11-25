@@ -2,9 +2,10 @@
   <div style="margin-bottom: 20px; text-align: right;">
     <a mat-flat-button color="accent" href="/todo/todo-create">➕TODO追加</a>
   </div>
-      <app-todo-list-item *ngFor="let todo of todos"
-        [todo] = "todo"
-        (edit) = "editTodo($event)"
-        (delete) = "deleteTodo($event)">
-      </app-todo-list-item>
+  <app-todo-list-item *ngFor="let todo of todos"
+    [todo] = "todo"
+    (edit) = "editTodo($event)"
+    (delete) = "deleteTodo($event)">
+  </app-todo-list-item>
+  <a mat-flat-button color="primary" href="/"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>
 </div>

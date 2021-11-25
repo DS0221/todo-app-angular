@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoModule } from './todo/todo.module';
 import { CategoryModule } from './category/category.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CategoryModule } from './category/category.module';
     BrowserAnimationsModule,
     TodoModule,
     HttpClientModule,
-    CategoryModule
+    CategoryModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
