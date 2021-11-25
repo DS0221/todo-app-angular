@@ -1,0 +1,62 @@
+/** カテゴリカラー */
+.RED {
+  background-color: red;
+  color: white;
+}
+
+.BLUE {
+  background-color: blue;
+  color: white;
+}
+
+.GRAY {
+  background-color: gray;
+  color: white;
+}
+
+.ORANGE {
+  background-color: orange;
+  color: white;
+}
+
+.PURPLE {
+  background-color: purple;
+  color: white;
+}
+
+.WHITE {
+  background-color: white;
+  color: black;
+}
+
+.SALMON {
+  background-color: salmon;
+  color: white;
+}
+
+/** カテゴリ */
+
+.category {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  border: solid 1px;
+}
+
+.categoryName {
+  width: 70%;
+  height: 30px;
+  display: inline-block;
+}
+
+.categorySlug {
+  width: 20%;
+  height: 30px;
+  display: inline-block;
+}
+
+.categoryColor {
+  width: 8%;
+  height: 30px;
+  display: inline-block;
+}

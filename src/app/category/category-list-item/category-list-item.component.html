@@ -1,0 +1,9 @@
+<div class="category">
+  <div class="categoryName">{{category.name}}</div>
+  <div class="categorySlug">{{category.slug}}</div>
+  <div class="{{category.color}} categoryColor">{{category.color}}</div>
+  <div style="text-align: right; margin-top: 5px;">
+    <button style="margin-right: 10px;" mat-flat-button color="primary" (click)="editCategory()">編集</button>
+    <button mat-flat-button color="warn" (click)="deleteCategory()">削除</button>
+  </div>
+</div>

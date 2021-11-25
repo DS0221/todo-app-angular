@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoModule } from './todo/todo.module';
+import { CategoryModule } from './category/category.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoModule } from './todo/todo.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     TodoModule,
-    HttpClientModule
+    HttpClientModule,
+    CategoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

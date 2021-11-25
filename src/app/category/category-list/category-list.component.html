@@ -1,0 +1,10 @@
+<div style="width: 100%;">
+  <div style="margin-bottom: 20px; text-align: right;">
+    <a mat-flat-button color="accent" href="/category/category-create">➕カテゴリー追加</a>
+  </div>
+      <app-category-list-item *ngFor="let category of categories"
+        [category] = "category"
+        (edit) = "editCategory($event)"
+        (delete) = "deleteCategory($event)">
+      </app-category-list-item>
+</div>
