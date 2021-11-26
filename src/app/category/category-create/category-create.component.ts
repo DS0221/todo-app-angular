@@ -25,7 +25,7 @@ export class CategoryCreateComponent implements OnInit {
       this.categoryForm = new FormGroup({
         name:    new FormControl('', Validators.required),
         slug:    new FormControl('', Validators.required),
-        color:   new FormControl("1", Validators.required)
+        color:   new FormControl(1, Validators.required)
       })
 
       this.categoryCreate = this.categoryForm.value;

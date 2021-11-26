@@ -1,35 +1,27 @@
-<div style="width: 850px;">
-  <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
-    <dl>
-      <dt>
-        カテゴリー名
-      </dt>
-      <dd>
-        <input style="width:500px" formControlName="name">
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        slug
-      </dt>
-      <dd>
-        <input style="width:500px" formControlName="slug">
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        色
-      </dt>
-      <dd>
-        <select style="width:500px" formControlName="color">
-          <option *ngFor="let color of colors" [value]="color.code">
+<app-common-header></app-common-header>
+<main class="main">
+  <h1>カテゴリー修正</h1>
+  <div>
+    <form class="todo-form" [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="todo-full-width" appearance="fill">
+        <mat-label>カテゴリー名</mat-label>
+        <input matInput placeholder="カテゴリー名" formControlName="name">
+      </mat-form-field>
+      <mat-form-field class="todo-full-width" appearance="fill">
+        <mat-label>slug</mat-label>
+        <input matInput placeholder="slug" formControlName="slug">
+      </mat-form-field>
+      <mat-form-field class="todo-full-width" appearance="fill">
+        <mat-label>色</mat-label>
+        <mat-select formControlName="color">
+          <mat-option *ngFor="let color of colors" [value]="color.code">
             {{ color.name }}
-          </option>
-        </select>
-      </dd>
-    </dl>
-    <div style="text-align: right;">
-      <button style="margin-right: 10px;" mat-flat-button color="primary" type="submit">修正</button><a mat-flat-button color="accent" href="/category/category-list">リストへ戻る</a>
-    </div>
-  </form>
-</div>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div style="text-align: right;">
+        <button style="margin-right: 10px;" mat-flat-button color="primary" type="submit">修正</button><a mat-flat-button color="accent" href="/category/category-list">リストへ戻る</a>
+      </div>
+    </form>
+  </div>
+</main>

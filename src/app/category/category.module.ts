@@ -7,8 +7,11 @@ import { CategoryListItemComponent } from './category-list-item/category-list-it
 import { MatIconModule } from '@angular/material/icon';
 import { CategoryCreateComponent } from './category-create/category-create.component';
 import { CategoryUpdateComponent } from './category-update/category-update.component';
-
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { HomeModule } from '../home/home.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,12 @@ import { CategoryUpdateComponent } from './category-update/category-update.compo
     CommonModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCardModule,
+    HomeModule
   ]
 })
 export class CategoryModule { }

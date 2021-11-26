@@ -1,6 +1,6 @@
 export interface CategoryUpdate {
   name:    string;
   slug:    string;
-  color:   string;
+  color:   number;
   id:      number;
 }

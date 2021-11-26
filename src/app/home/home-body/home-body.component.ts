@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
+import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'app-home-body',
@@ -11,9 +13,16 @@ export class HomeBodyComponent implements OnInit {
 
   categoryCnt: number = 0;
 
-  constructor() { }
+  constructor(
+    private todoService: TodoService,
+    private categoryService: CategoryService
+  ) {
+
+  }
 
   ngOnInit(): void {
+    this.todoService.getTodoList().subscribe(v => this.todoCnt = v.todoList.length);
+    this.categoryService.getCategoryList().subscribe(v => this.categoryCnt = v.categoryList.length);
   }
 
 }

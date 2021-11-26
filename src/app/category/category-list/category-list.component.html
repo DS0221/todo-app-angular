@@ -1,11 +1,15 @@
-<div style="width: 100%;">
-  <div style="margin-bottom: 20px; text-align: right;">
-    <a mat-flat-button color="accent" href="/category/category-create">➕カテゴリー追加</a>
+<app-common-header></app-common-header>
+<main class="main">
+  <h1>カテゴリーリスト</h1>
+  <div style="width: 100%;">
+    <div style="margin-bottom: 20px; text-align: right;">
+      <a mat-flat-button color="accent" href="/category/category-create">➕カテゴリー追加</a>
+    </div>
+    <app-category-list-item *ngFor="let category of categories"
+      [category] = "category"
+      (edit) = "editCategory($event)"
+      (delete) = "deleteCategory($event)">
+    </app-category-list-item>
+    <a mat-flat-button color="primary" href="/"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>
   </div>
-  <app-category-list-item *ngFor="let category of categories"
-    [category] = "category"
-    (edit) = "editCategory($event)"
-    (delete) = "deleteCategory($event)">
-  </app-category-list-item>
-  <a mat-flat-button color="primary" href="/"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>
-</div>
+</main>

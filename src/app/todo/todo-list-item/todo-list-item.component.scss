@@ -36,10 +36,7 @@
 
 /** todo関連 */
 .todo {
-  width: 100%;
-  display: block;
   margin-bottom: 20px;
-  border: solid 1px;
 }
 
 .toDoCategory {
@@ -49,14 +46,9 @@
   text-align: center;
 }
 
-.todoTitle {
-  width: 65%;
-  height: 30px;
-  display: inline-block;
-}
-
 .todoState {
-  width: 15%;
+  text-align: right;
+  width: 85%;
   height: 30px;
   display: inline-block;
 }

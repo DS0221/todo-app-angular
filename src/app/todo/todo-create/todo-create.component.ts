@@ -28,7 +28,7 @@ export class TodoCreateComponent implements OnInit {
       this.todoForm = new FormGroup({
         title:    new FormControl('', Validators.required),
         body:     new FormControl('', Validators.required),
-        category: new FormControl("1", Validators.required)
+        category: new FormControl(1, Validators.required)
     });
 
     this.todoCreate = this.todoForm.value;

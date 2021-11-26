@@ -7,7 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TodoCreateComponent } from './todo-create/todo-create.component';
 import { TodoUpdateComponent } from './todo-update/todo-update.component';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { HomeModule } from '../home/home.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,12 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCardModule,
+    HomeModule
   ]
 })
 export class TodoModule { }
