@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeBodyComponent implements OnInit {
 
+  todoCnt: number = 0;
+
+  categoryCnt: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {

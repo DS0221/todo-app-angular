@@ -1,0 +1,35 @@
+<div style="width: 850px;">
+  <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+    <dl>
+      <dt>
+        カテゴリー名
+      </dt>
+      <dd>
+        <input style="width:500px" formControlName="name">
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        slug
+      </dt>
+      <dd>
+        <input style="width:500px" formControlName="slug">
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        色
+      </dt>
+      <dd>
+        <select style="width:500px" formControlName="color">
+          <option *ngFor="let color of colors" [value]="color.code">
+            {{ color.name }}
+          </option>
+        </select>
+      </dd>
+    </dl>
+    <div style="text-align: right;">
+      <button style="margin-right: 10px;" mat-flat-button color="primary" type="submit">修正</button><a mat-flat-button color="accent" href="/category/category-list">リストへ戻る</a>
+    </div>
+  </form>
+</div>

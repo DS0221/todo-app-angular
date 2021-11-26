@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CategoryListItemComponent } from './category-list-item/category-list-item.component';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoryCreateComponent } from './category-create/category-create.component';
+import { CategoryUpdateComponent } from './category-update/category-update.component';
 
 
 
@@ -13,7 +14,8 @@ import { CategoryCreateComponent } from './category-create/category-create.compo
   declarations: [
     CategoryListComponent,
     CategoryListItemComponent,
-    CategoryCreateComponent
+    CategoryCreateComponent,
+    CategoryUpdateComponent
   ],
   imports: [
     CommonModule,

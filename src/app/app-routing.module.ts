@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryCreateComponent } from './category/category-create/category-create.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
+import { CategoryUpdateComponent } from './category/category-update/category-update.component';
 import { HomeComponent } from './home/home/home.component';
 import { TodoCreateComponent } from './todo/todo-create/todo-create.component';
 import { TodoListComponent } from './todo/todo-list/todo-list.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'todo/todo-update/:id', component: TodoUpdateComponent},
   {path: 'category/category-list', component: CategoryListComponent},
   {path: 'category/category-create', component: CategoryCreateComponent},
+  {path: 'category/category-update/:id', component: CategoryUpdateComponent}
 ];
 
 @NgModule({

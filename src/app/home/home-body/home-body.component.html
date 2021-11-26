@@ -1,4 +1,10 @@
-<ul>
-  <li><a mat-flat-button color="accent" href="/category/category-list">カテゴリー一覧</a></li>
-  <li><a mat-flat-button color="primary" href="/todo/todo-list">Todo一覧</a></li>
-</ul>
+<p>
+  <a mat-flat-button color="accent" href="/category/category-list">
+    <span [matBadge]="todoCnt" matBadgeOverlap="false">カテゴリー一覧</span>
+  </a>
+</p>
+<p>
+  <a mat-flat-button color="primary" href="/todo/todo-list">
+    <span [matBadge]="categoryCnt" matBadgeOverlap="false">Todo一覧</span>
+  </a>
+</p>
